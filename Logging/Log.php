@@ -66,8 +66,9 @@ interface Log {
 	public function debug($message, array $context = array());
 
 	/**
-	 * Log a message to the logs.
+	 * Log a $level message to the logs.
 	 *
+	 * @param  string  $level
 	 * @param  string  $message
 	 * @param  array  $context
 	 * @return void
