@@ -4,10 +4,7 @@ namespace Illuminate\Contracts\Validation;
 
 use Closure;
 
-/**
- * @deprecated see ValidationRule
- */
-interface InvokableRule
+interface ValidationRule
 {
     /**
      * Run the validation rule.
@@ -17,5 +14,5 @@ interface InvokableRule
      * @param  \Closure(string): \Illuminate\Translation\PotentiallyTranslatedString  $fail
      * @return void
      */
-    public function __invoke(string $attribute, mixed $value, Closure $fail);
+    public function validate(string $attribute, mixed $value, Closure $fail): void;
 }
